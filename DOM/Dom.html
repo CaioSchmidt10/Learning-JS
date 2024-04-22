@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dom.css">
+    <title>Document Object Modifier</title>
+</head>
+<body>
+    <input type="text" placeholder="Digite um caractere aqui" 
+    style="margin-top: 20px; margin-bottom: 20px;" 
+    onkeyup="DistribuirCaracter()"
+    id = 'entrada'
+    >
+
+    <hr/>
+
+    <span>Letras: </span>
+    <input type="text" disabled id="apenas_letras">
+
+    <span>Números: </span>
+    <input type="text" disabled id="apenas_numeros">
+
+    <hr>
+
+    <h3 style="margin-top: 50px;">Manipulando Estilo</h3>
+
+    <button type="button" onclick="ModificarEstilo('#FF0000','200px','100px')">Vermelho</button>
+    <button type="button" onclick="ModificarEstilo('#00FF00','90px','300px')">Verde</button>
+    <button type="button" onclick="ModificarEstilo('#0000FF','150','50px')">Azul</button>
+
+    <div id="cor"></div>
+
+    <hr>
+
+    <h3>Substintuido texto em Classe</h3>
+    <div id = "mensagem" class="estilo1">
+        <h4 id = "h4_mensagem">Texto</h4>
+    </div>
+
+    <button type="button" onclick="ModificarClasse()">Aplicar Classe</button>
+
+    <script src = "Dom.js"></script>
+</body>
+</html>
