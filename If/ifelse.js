@@ -24,3 +24,6 @@ if (nota >= media && faltas < faltas_maximas){
 else{
     document.write('Reprovado')
 }
+
+var resultado = (nota >= media && faltas <= faltas_maximas) ? 'Aprovado' : 'Reprovado'
+document.write(resultado)
