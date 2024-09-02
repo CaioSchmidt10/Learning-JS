@@ -1,87 +1,37 @@
-/*var largura = prompt('Digite o valor da largura')
-
-var comprimento = prompt('Digite o valor do comprimento')
-
-var area = calcularArea(largura, comprimento);
-
-document.write('O valor da área é: ' + area + ' metros quadrados')
-
-function calcularArea(largura, comprimento){
-
+function calcularAreaTerreno (largura,comprimento){
     var area = largura * comprimento;
 
-    return area;
+    return area
 }
 
-// Parametros
+var largura = prompt('Digite valor da largura')
+var comprimento = prompt('Digite valor do comprimento')
+var area = calcularAreaTerreno (largura,comprimento);
 
-function soma (a,b){
-    return a + b;
-}
-
-console.log(soma(7,7)) // considera os dois paramentros
-console.log(soma(7,6,4,9)) // desconsidera os dois ultimos parametros que não foram passados
-console.log(soma(7)) // B === Undenfined
-console.log(soma()) // A e B === Undefined
+document.write('A área possui ' + area + ' metros quadrados')
 
 document.write('<br/>')
 
-// Funções anonimas
+// Funções String
 
-var nome = prompt("Digite seu nome")
+var nome = prompt('Digite o seu nome: ')
 
-var exibirSaudacao = function(nome){
-    document.write('Olá ' + nome + ', tudo bem?')
-}
+document.write(nome.substr(0, 2))
 
-exibirSaudacao(nome);
+var nome2 = 'Beatriz Paes Pinto Valença'
 
-Callback
+document.write(nome2.toLowerCase() + '<br/>')
 
-function exibirArtigo(id, callbackSucesso, callbackError){
-    if(true){
-        callbackSucesso('Funções de callback em JS','funções de callback são muito utilizadas......')
-    } else{
-        callbackError('Erro ao recuperar os dados')
-    }
+// Funções Matemáticas
 
-}
+var x = Math.ceil(10.980)
+document.write(x + '<br/>')
 
-var callbackSucesso = function(titulo, descricao){
-    document.write('<h1/>' + titulo + '<h1/>')
-    document.write('<hr/>')
-    document.write('<p>' + descricao + '</p>')
-}
+var y = Math.floor(10.480)
+document.write(y + '<br/>')
 
-var callbackError = function(error){
-    document.write('<p><b>Error : <b/>' + error + '</p>')
-}
+var z= Math.round(10.580)
+document.write(z + '<br/>')
 
-exibirArtigo(1, callbackSucesso,callbackErro)*/
-
-document.write('<br/>')
-
-// Funções Datas
-
-var data = new Date()
-
-
-document.write(data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear())
-
-document.write('<br/>')
-
-var data2 = new Date()
-
-data2.setDate(data.getDate() + 16)
-data2.setMonth(data.getMonth() + 2)
-data2.setFullYear(data.getFullYear() + 1)
-
-document.write('Data Modificada: ', data2.toString())
-
-var milisegundos = (data2.getTime() - data.getTime())
-var milisegundos_dia = 1*24*60*60*1000
-
-document.write('<br/>')
-
-document.write('A diferença de dias entre as duas datas: ', Math.ceil(milisegundos/milisegundos_dia))
-
+var random = Math.random()
+document.write(random)
